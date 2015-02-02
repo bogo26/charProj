@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="scripts/papaparse.js" ></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="scripts/getPM.js" ></script>
+		<script type="text/javascript" src="scripts/printAll.js" ></script>
+		<script type="text/javascript" src="scripts/printPM.js" ></script>
+		<script type="text/javascript" src="scripts/printChart.js" ></script>
+		<link href='http://fonts.googleapis.com/css?family=Fruktur' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	
+	<body onload="getPM();">
+		<div id="logo"> Chart <br> Stuff </div>
+		<div id="content">
+			<label for="PMname"></label>
+			<select id="PMname" onchange="printAll();"></select>
+			<select id="zoom" placeholder="Select zoom level" onchange="changeZoom();">
+				<option value="" disabled selected>Select your zoom level</option>
+				<option value="nozoom">No Zoom</option>
+				<option value="normal">Normal</option>
+				<option value="high">High</option>
+			</select>
+			
+			<label class="lable" for="PM">PM:</label>
+			<div id="PM"></div><br><br>
+			
+			<label id="lableDEV" class="lable" for="DEV"><br><br>DEV:<br><hr></label>
+			<div id="DEV"><br></div>
+			
+			<label id="lableQA" class="lable" for="QA"><br><br>QA:<br><hr></label>
+			<div id="QA"><br></div>
+		</div>
+	
+	</body>	
+	
+	<script type="text/javascript" src="scripts/UI.js" ></script>
+</html>
